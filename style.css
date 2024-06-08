@@ -1,0 +1,149 @@
+:root {
+    --bg-color: #112f3c; /* Background color */
+    --btn-color: #410000; /* Button color */
+    --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+    --color: #ffff; /* Text color */
+    --hover-color: #ffdddd; /* Hover color */
+    --active-color: #ffbbbb; /* Active color */
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color); /* Apply background color */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    color: var(--color); /* Apply text color */
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo label {
+    color: var(--btn-color); /* Apply button color */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto 0; /* Combined margin-top and margin */
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--btn-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0; /* Added padding to reset default ul padding */
+    margin: 0; /* Added margin to reset default ul margin */
+}
+
+nav ul a {
+    color: var(--color); /* Apply text color */
+    text-decoration: none;
+    transition: all .8s;
+}
+
+nav ul a:hover {
+    color: var(--btn-color);
+}
+
+nav ul a:active {
+    color: green; /* Change color when active */
+    background-color: white;
+}
+
+.left {
+    padding: 20px;
+    color: var(--color);
+}
+
+.left h1, .left h2 {
+    margin: 0;
+}
+
+.left h1 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.left h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons .fab, .social-icons .fas {
+    font-size: 30px;
+    color: var(--color);
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .fab:hover, .social-icons .fas:hover {
+    transform: scale(1.1);
+    color: var(--hover-color);
+}
+
+#download-resume {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: var(--color);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#download-resume:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+#download-resume:active {
+    background-color: var(--active-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Changed from center to space-between */
+    align-items: center;
+    height: 70vh;
+    padding-top: 100px; /* Adjust based on your nav height */
+    box-sizing: border-box;
+}
+
+.left {
+    text-align: center;
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    text-align: center; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.img-fluid {
+    max-width: 50%; /* Adjusted to take more space */
+    height: auto; /* Adjusted to maintain aspect ratio */
+    box-shadow: var(--box-shadow); /* Added box shadow for effect */
+    border-radius: 50px; /* Added border radius for better appearance */
+}
+
+
+

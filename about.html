@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT</title>
+  <style>
+    :root {
+      --bg-color: #112f3c; /* Background color */
+      --btn-color: #410000; /* Button color */
+      --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+      --color: #ffff; /* Text color */
+      --hover-color: #ffdddd; /* Hover color */
+      --active-color: #ffbbbb; /* Active color */
+      --container-bg-color: #1c3d4d; /* Container background color */
+      --text-color: #f0f0f0; /* Text color inside container */
+      --interest-bg-color: #2a4b5e; /* Background color for interest items */
+      --interest-text-color: #ffffff; /* Text color for interest items */
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-color); /* Apply background color */
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--color);
+    }
+
+    .logo {
+      color: var(--color); /* Apply text color */
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo label {
+      color: var(--btn-color); /* Apply button color */
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin: 20px auto 0; /* Combined margin-top and margin */
+      padding-bottom: 20px;
+      border-bottom: 3px solid var(--btn-color);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      padding: 0; /* Added padding to reset default ul padding */
+      margin: 0; /* Added margin to reset default ul margin */
+    }
+
+    nav ul a {
+      color: var(--color); /* Apply text color */
+      text-decoration: none;
+      transition: all .8s;
+    }
+
+    nav ul a:hover {
+      color: var(--btn-color);
+    }
+
+    nav ul a:active {
+      color: var(--active-color); /* Change color when active */
+      background-color: var(--hover-color); /* Change background when active */
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background-color: var(--container-bg-color); /* Container background color */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: var(--box-shadow); /* Box shadow */
+      width: 80%;
+      margin: 20px auto; /* Center the container and add margin */
+    }
+
+    .image-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .profile-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10%; /* Rounded image */
+      box-shadow: var(--box-shadow); /* Box shadow for image */
+    }
+
+    .about-section {
+      flex: 2;
+      padding: 20px;
+      color: var(--text-color); /* Text color inside container */
+    }
+
+    .about-section h2 {
+      margin-top: 0;
+    }
+
+    .about-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-section li {
+      margin-bottom: 10px;
+    }
+
+    .icofont-rounded-right {
+      margin-right: 10px;
+    }
+
+    .interests-section {
+      background-color: var(--container-bg-color);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow);
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .interests-section h2 {
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 30px;
+      padding: 30px;
+      justify-items: center;
+    }
+
+    .interest-item {
+      background-color: var(--interest-bg-color);
+      color: var(--interest-text-color);
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 100px;
+      box-shadow: var(--box-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .interest-item:hover {
+      background-color: var(--hover-color);
+      color: var(--btn-color);
+      cursor: pointer;
+    }
+
+    .interest-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+    }
+
+    .container-ce {
+      width: 80%;
+      margin: 20px auto;
+      background-color:var(--container-bg-color);
+      padding: 20px;
+      box-shadow: var(--box-shadow);
+      border-radius: 10px;
+    }
+    .certification {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0; /* Increased padding for better spacing */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for color */
+    }
+    .certification:last-child {
+      border-bottom: none;
+    }
+    .certification:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+      color: #00796b; /* Dark cyan text color on hover */
+    }
+    .certification h3 {
+      margin: 0 0 10px; /* Increased bottom margin for better spacing */
+      color: #333;
+      background-color: #e8f0fe;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .certification:hover h3 {
+      color: #00796b; /* Change heading color on hover */
+      background-color: #b2ebf2; /* Change heading background color on hover */
+    }
+    .certification p {
+      margin: 5px 0;
+      padding-left: 10px; /* Added left padding for alignment */
+      color: #555;
+    }
+    .certification:hover p {
+      color: #00796b; /* Change paragraph text color on hover */
+    }
+    .certification a {
+      color: #1a73e8;
+      text-decoration: none;
+      padding-left: 10px; /* Added left padding for alignment */
+      transition: color 0.3s ease; /* Added transition for color */
+    }
+    .certification:hover a {
+      color: #004d40; /* Change link color on hover */
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header_menu">
+    <header>
+      <a class="logo" href="pro.html">SSR<label>KESAVAREDDY</label></a>
+      <nav>
+        <ul>
+            <li><a href="pro.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Education.html">EDUCATION</a></li>
+            <li><a href="Project.html">PROJECTS</a></li>
+            <li><a href="Skills.html">SKILLS</a></li>
+            <li><a href="https://drive.google.com/file/d/1MPaQTfZ4F1oJ04RALxOzZi2x8wCRXqz1/view?usp=sharing" target="_blank"> <span>RESUME</span></a></li>
+            <li><a href="Contacts.html">CONTACTS</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="image-section">
+        <img src="ASSETS\profile_img\Snapinsta.app_416316046_753281036654605_7450312841362083109_n_10801.jpg" alt="Your Image" class="profile-img">
+    </div>
+    <div class="about-section">
+        <h2>About Me</h2>
+        <p>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure
+        to the underlying concepts and applying them vividly to various projects, my love for these domains came into being.
+        I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.</p>
+        <ul>
+            <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 25 August 2002</li>
+            <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 9182292033</li>
+            <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Penugonda, Andhra Pradesh, 534320</li>
+            <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> ssrkesavareddy08@gmail.com</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="interests-section">
+    <h2>Interests</h2>
+    <div class="interests-grid">
+      <div class="interest-item">
+        <img src="ASSETS\interest\java-icon-2048x2048-yxty4s2p.png" alt="Java Icon">
+        <span>Java</span>
+      </div>
+      <div class="interest-item">
+        <img src="ASSETS\interest\Python-logo-notext.svg.png" alt="Python Icon">
+        <span>Python</span>
+      </div>
+      <div class="interest-item">
+        <img src="ASSETS\interest\images.png" alt="Linux Icon">
+        <span>Linux</span>
+      </div>
+      <div class="interest-item">
+        <img src="ASSETS\interest\2980560.png" alt="Machine Learning Icon">
+        <span>Machine Learning</span>
+      </div>
+      <div class="interest-item">
+        <img src="ASSETS\interest\Computer-Vision-Line-Icon-Graphics-14034068-1.jpg" alt="Computer Vision Icon">
+        <span>Computer Vision</span>
+      </div>
+      <div class="interest-item">
+        <img src="ASSETS\interest\images (1).png" alt="DSA Icon">
+        <span>DSA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-ce">
+    <h1>My Certifications</h1>
+    
+    <div class="certification">
+      <h3>Red Hat System Administration II (RH134)</h3>
+      <p>Issued by: RHLS-Red Hat Learning Subscription</p>
+      <p>Issued: JUNE 2024 </p>
+      <p>Credential ID: f111bd1d-f002-4599-8d66-9cb2b9349372</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+  <div class="certification">
+      <h3>Red Hat System Administration I (RH124)</h3>
+      <p>Issued by: RHLS-Red Hat Learning Subscription</p>
+      <p>Issued: JUNE 2024 ·</p>
+      <p>Credential ID: ed8dc3f8-661f-4fac-a35d-30421be1db3c</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+  <div class="certification">
+      <h3>Database Management System</h3>
+      <p>Issued by: Infosys Springboard</p>
+      <p>Date: July 2023</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+  <div class="certification">
+      <h3>Core Java</h3>
+      <p>Issued by: CipherSchools</p>
+      <p>Date: February 2023</p>
+      <p>Credential ID: CS2023-3479</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+  <div class="certification">
+      <h3>Learn Advanced Python Programming</h3>
+      <p>Issued by: E-Box</p>
+      <p>Date: July 2022</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+  <div class="certification">
+      <h3>Operational Excellence and Critical Thinking</h3>
+      <p>Issued by: Great Learning</p>
+      <p>Date: June 2022</p>
+      <p><a href="https://www.linkedin.com/in/ssrkesavareddy/details/certifications/">Show Credential</a></p>
+  </div>
+
+</div>
+</body>
+</html>

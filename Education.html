@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Roadmap</title>
+    <style>
+       :root {
+    --bg-color: #112f3c; /* Background color */
+    --btn-color: #410000; /* Button color */
+    --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+    --color: #ffff; /* Text color */
+    --hover-color: #ffdddd; /* Hover color */
+    --active-color: #ffbbbb; /* Active color */
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color); /* Apply background color */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    color: var(--color); /* Apply text color */
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo label {
+    color: var(--btn-color); /* Apply button color */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto 0; /* Combined margin-top and margin */
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--btn-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0; /* Added padding to reset default ul padding */
+    margin: 0; /* Added margin to reset default ul margin */
+}
+
+nav ul a {
+    color: var(--color); /* Apply text color */
+    text-decoration: none;
+    transition: all .8s;
+}
+
+nav ul a:hover {
+    color: var(--btn-color);
+}
+
+nav ul a:active {
+    color: green; /* Change color when active */
+    background-color: white;
+}
+        .section-title h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #12d640;
+        }
+        .roadmap {
+            position: relative;
+            margin: 0 auto;
+            padding: 40px 0;
+            width: 80%;
+        }
+        .roadmap::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #12d640;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .roadmap-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .roadmap-item img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .roadmap-item .roadmap-content {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .roadmap-item:nth-child(odd) {
+            left: 0;
+        }
+        .roadmap-item:nth-child(even) {
+            left: 50%;
+        }
+        .roadmap-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #12d640;
+            border: 4px solid #fff;
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px #333;
+        }
+        .roadmap-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 767px) {
+          .roadmap {
+            width: 90%;
+            padding: 20px;
+          }
+          .roadmap::after {
+            left: 20px;
+          }
+          .roadmap-item {
+            width: 100%;
+            padding-left: 60px;
+            padding-right: 25px;
+            left: 0 !important;
+            margin-bottom: 30px;
+          }
+          .roadmap-item::after {
+            left: 15px;
+            right: auto;
+          }
+        }
+    </style>
+</head>
+<body>
+  <div class="header_menu">
+    <header>
+      <a class="logo" href="pro.html">SSR<label>KESAVAREDDY</label></a>
+      <nav>
+        <ul>
+            <li><a href="pro.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Education.html">EDUCATION</a></li>
+            <li><a href="Project.html">PROJECTS</a></li>
+            <li><a href="Skills.html">SKILLS</a></li>
+            <li><a href="https://drive.google.com/file/d/1MPaQTfZ4F1oJ04RALxOzZi2x8wCRXqz1/view?usp=sharing" target="_blank"> <span>RESUME</span></a></li>
+            <li><a href="Contacts.html">CONTACTS</a></li>
+        </ul>
+    </nav>
+    
+    </header>
+    <section id="education" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Education</h2>
+          </div>
+          <div class="roadmap">
+            <div class="roadmap-item" data-aos="fade-up">
+              <img src="ASSETS\edu\c912d49f5f63e3c25aae2465f7577e7a.png" style="background-color: white;" class="img-fluid" alt="">
+              <div class="roadmap-content">
+                <p><em>B.Tech. in Computer Science</em></p>
+                <h5>August 2020 - May 2024</h5>
+                <h5>CGPA:  7.24</h5>
+                <h6>Relevant Coursework</h6>
+                <ul>
+                  <li>Computer Science Engineering</li>
+                  <li>Python development</li>
+                  <li>Java development</li>
+                  <li>Machine Learning</li>
+                  <li>Web Development</li>
+                </ul>
+              </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade-up" data-aos-delay="100">
+              <img src="ASSETS\edu\logo.png" style="background-color: white;" class="img-fluid" alt="">
+              <div class="roadmap-content">
+                <p><em>Intermediate in MPC Course</em></p>
+                <h5>June 2018- March 2020</h5>
+                <h5>CGPA:  9.75</h5>
+                <h6>Relevant Coursework</h6>
+                <ul>
+                  <li>Mathematics</li>
+                  <li>English (First language)</li>
+                  <li>IIT Training</li>
+                </ul>
+              </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade-up" data-aos-delay="200">
+              <img src="ASSETS\edu\bhashyam.jpg" class="img-fluid" alt="">
+              <div class="roadmap-content">
+                <p><em>SSC</em></p>
+                <h5>June 2017 - March 2018</h5>
+                <h5>CGPA:  9.2</h5>
+                <h6>Relevant Coursework</h6>
+                <ul>
+                  <li>Mathematics</li>
+                  <li>English (First language)</li>
+                  <li>Remaining Standard Subjects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

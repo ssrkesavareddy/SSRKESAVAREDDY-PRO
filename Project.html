@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        :root {
+            --bg-color: #112f3c; /* Background color */
+            --btn-color: #410000; /* Button color */
+            --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+            --color: #ffff; /* Text color */
+            --hover-color: #ffdddd; /* Hover color */
+            --active-color: #ffbbbb; /* Active color */
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color); /* Apply background color */
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: var(--color); /* Apply text color */
+        }
+
+        .logo {
+            color: var(--color); /* Apply text color */
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo label {
+            color: var(--btn-color); /* Apply button color */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px auto 0; /* Combined margin-top and margin */
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--btn-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 0; /* Added padding to reset default ul padding */
+            margin: 0; /* Added margin to reset default ul margin */
+        }
+
+        nav ul a {
+            color: var(--color); /* Apply text color */
+            text-decoration: none;
+            transition: all .8s;
+        }
+
+        nav ul a:hover {
+            color: var(--btn-color);
+        }
+
+        nav ul a:active {
+            color: green; /* Change color when active */
+            background-color: white;
+        }
+
+        .projects {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            display: flex;
+            width: 48%;
+            background-color: yellowgreen;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .project img {
+            width: 40%;
+            transition: transform 0.5s ease;
+        }
+
+        .project-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .project-details h3 {
+            margin-top: 0;
+        }
+
+        .project-details a {
+            color: var(--color);
+            text-decoration: none;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .project:hover img {
+            transform: scale(1.1);
+        }
+
+        .projects.hidden .project {
+            opacity: 0.1;
+        }
+
+        .projects.hidden .project:hover {
+            opacity: 1;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .filter-buttons button {
+            background-color: orangered;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_menu">
+        <header>
+            <a class="logo" href="pro.html">SSR<label>KESAVAREDDY</label></a>
+            <nav>
+                <ul>
+                    <li><a href="pro.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                    <li><a href="Education.html">EDUCATION</a></li>
+                    <li><a href="Project.html">PROJECTS</a></li>
+                    <li><a href="Skills.html">SKILLS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1MPaQTfZ4F1oJ04RALxOzZi2x8wCRXqz1/view?usp=sharing" target="_blank"> <span>RESUME</span></a></li>
+                    <li><a href="Contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('Java')">Java</button>
+        <button onclick="filterProjects('Python')">Python</button>
+        <button onclick="filterProjects('machine-learning')">Machine Learning</button>
+        <button onclick="filterProjects('Deep-Learning')">Deep Learning</button>
+        <button onclick="filterProjects('Computer-Vision')">Computer Vision</button>
+        <button onclick="filterProjects('Web-Development')">Web Development</button>
+    </div>
+    
+
+    <div class="projects">
+        <div class="project" data-tags="machine-learning, Deep-Learning, Computer-Vision, Python">
+            <img src="ASSETS\proj\1599332040937.jpeg" alt="Project 1 Image">
+            <div class="project-details">
+                <h3>Real Time Facial Emotion Detection with DeepLearning(Sequential)</h3>
+                <h3>About Project</h3>
+                <p>The "Deep Learning-Based Facial Emotion Recognition Using Keras Sequential Model" project aims to create 
+                    an advanced system capable of detecting human emotions from facial expressions with an accuracy of 66%. 
+                    This project utilizes the power of Convolutional Neural Networks (CNNs) within the Keras Sequential API to
+                     identify and classify emotions</p>
+                <h3>Skills</h3>
+                <p>Python, DeepLearning, Sequential, TensorFlow, Keras</p>
+                <a href="https://github.com/ssrkesavareddy/Real-Time-Facial-Emotion-Detection-with-Deep-Learning-Sequential-" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+    
+        <div class="project" data-tags="machine-learning, Deep-Learning, Python, AWS, FLASK, Web-Development">
+            <img src="ASSETS\proj\ck340ov180hsy65g0yxb6gbhb-1-chatbots-for-marketing-smm.one-half.png" alt="Project 2 Image">
+            <div class="project-details">
+                <h3>MIRAI-CHATBOT using NLP And Pytroch</h3>
+                <h3>About Project</h3>
+                <p>Chatbot Powered by Deep Learning This project involves developing a sophisticated chatbot that 
+                    leverages deep learning techniques for natural language processing (NLP) using PyTorch. 
+                    The chatbot is trained on various user intents to provide accurate and contextually appropriate responses.</p>
+                <h3>Skills</h3>
+                <p>Python, DeepLearning, Pytroch, web Development, Natuaral language processing, FLASKAPI, Linux</p>
+                <a href="https://github.com/ssrkesavareddy/MIRAI-CHATBOT" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+
+        <div class="project" data-tags="Java">
+            <img src="ASSETS\proj\p_-GZTStkoI-HD.jpg" alt="Project 3 Image">
+            <div class="project-details">
+                <h3>Banking system by JDBC</h3>
+                <h3>About Project</h3>
+                <p>A banking system developed using Java with JDBC (Java Database Connectivity) and MySQL can be a comprehensive project 
+                    demonstrating object-oriented programming (OOP) principles in action</p>
+                <h3>Skills</h3>
+                <p>Java, OOPS, DSA, JDBC, MYSQL</p>
+                <a href="https://github.com/ssrkesavareddy/Banking_system-by-JDBC" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+
+        <div class="project" data-tags="Java">
+            <img src="ASSETS\proj\splashscreen.jpeg" alt="Project 4 Image">
+            <div class="project-details">
+                <h3>Cars ShowRoom Management System by Java</h3>
+                <h3>About Project</h3>
+                <p>Automobile Showroom Management System provides a comprehensive solution for managing various aspects 
+                    of showroom operations efficiently, including vehicle sales, inventory management, customer service, 
+                    and employee management. demonstrating object-oriented programming (OOP) principles in action</p>
+                <h3>Skills</h3>
+                <p>Java, OOPS, DSA</p>
+                <a href="https://github.com/ssrkesavareddy/Car-Show-Room-Management" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+
+        <div class="project" data-tags="machine-learning,  Python">
+            <img src="ASSETS\proj\Bayshore-Blog-31.01.2022-672x372.png" alt="Project 5 Image">
+            <div class="project-details">
+                <h3>Anomaly-Detection In Financial Transactions By KNN</h3>
+                <h3>About Project</h3>
+                <p>Anomaly detection in financial transactions using the k-Nearest Neighbors (k-NN) algorithm is a fascinating
+                     application of machine learning in the realm of fraud detection.</p>
+                <h3>Skills</h3>
+                <p>Python, KNN, machine-learning</p>
+                <a href="https://github.com/ssrkesavareddy/Anomaly-Detection-In-Financial-Transactions-By-KNN" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+
+        <div class="project" data-tags="machine-learning,  Python, Computer-Vision, Deep-Learning">
+            <img src="ASSETS\proj\img.jpg" alt="Project 6 Image">
+            <div class="project-details">
+                <h3>Object Detection by Faster-RCNN</h3>
+                <h3>About Project</h3>
+                <p>
+                    Object detection using Faster R-CNN (Region-based Convolutional Neural Network) is a state-of-the-art deep
+                     learning technique for detecting objects within images.</p>
+                <h3>Skills</h3>
+                <p>Python, KNN, machine-learning, Computer-Vision</p>
+                <a href="https://github.com/ssrkesavareddy/Object-Detection-by-Faster-RCNN" target="_blank" style="color: blue;">GitHub Repository</a>
+            </div>
+        </div>
+
+
+        <!-- Add more projects as needed -->
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', () => {
+                document.querySelector('.projects').classList.add('hidden');
+                project.classList.remove('hidden');
+            });
+            project.addEventListener('mouseout', () => {
+                document.querySelector('.projects').classList.remove('hidden');
+            });
+        });
+
+        function filterProjects(category) {
+    const projects = document.querySelectorAll('.project');
+
+    projects.forEach(project => {
+        const tags = project.dataset.tags.split(',').map(tag => tag.trim().toLowerCase());
+
+        if (category === 'all' || tags.includes(category.toLowerCase())) {
+            project.style.display = 'flex';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+       :root {
+    --bg-color: #112f3c; /* Background color */
+    --btn-color: #410000; /* Button color */
+    --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+    --color: #ffff; /* Text color */
+    --hover-color: #ffdddd; /* Hover color */
+    --active-color: #ffbbbb; /* Active color */
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color); /* Apply background color */
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo {
+    color: var(--color); /* Apply text color */
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo label {
+    color: var(--btn-color); /* Apply button color */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto 0; /* Combined margin-top and margin */
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--btn-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0; /* Added padding to reset default ul padding */
+    margin: 0; /* Added margin to reset default ul margin */
+}
+
+nav ul a {
+    color: var(--color); /* Apply text color */
+    text-decoration: none;
+    transition: all .8s;
+}
+
+nav ul a:hover {
+    color: var(--btn-color);
+}
+
+nav ul a:active {
+    color: green; /* Change color when active */
+    background-color: white;
+}
+
+.skills-section {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.skills-section h2 {
+    color: var(--color);
+}
+
+.skills-container {
+    margin-top: 20px;
+}
+
+.skill {
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.skill:hover img {
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow);
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="pro.html">SSR<label>KESAVAREDDY</label></a>
+        <nav>
+            <ul>
+                <li><a href="pro.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Education.html">EDUCATION</a></li>
+                <li><a href="Project.html">PROJECTS</a></li>
+                <li><a href="Skills.html">SKILLS</a></li>
+                <li><a href="https://drive.google.com/file/d/1MPaQTfZ4F1oJ04RALxOzZi2x8wCRXqz1/view?usp=sharing" target="_blank"> <span>RESUME</span></a></li>
+                <li><a href="Contacts.html">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="ASSETS\skills\Screenshot 2024-06-08 140659.png" alt="Skill 1">
+            </div>
+            <div class="skill">
+                <img src="ASSETS\skills\Screenshot 2024-06-08 140734.png" alt="Skill 2">
+            </div>
+            <div class="skill">
+                <img src="ASSETS\skills\Screenshot 2024-06-08 141744.png" alt="Skill 3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

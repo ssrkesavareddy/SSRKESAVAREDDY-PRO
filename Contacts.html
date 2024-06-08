@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <style>
+   :root {
+  --bg-color: #112f3c; /* Background color */
+  --btn-color: #410000; /* Button color */
+  --box-shadow: 0px 0px 5px var(--btn-color); /* Box shadow color */
+  --color: #ffff; /* Text color */
+  --hover-color: #ffdddd; /* Hover color */
+  --active-color: #ffbbbb; /* Active color */
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  color: var(--color); /* Apply text color */
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo label {
+  color: var(--btn-color); /* Apply button color */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto 0; /* Combined margin-top and margin-bottom */
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--btn-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0; /* Added padding to reset default ul padding */
+  margin: 0; /* Added margin to reset default ul margin */
+}
+
+nav ul a {
+  color: var(--color); /* Apply text color */
+  text-decoration: none;
+  transition: all 0.8s;
+}
+
+nav ul a:hover {
+  color: var(--btn-color);
+}
+
+nav ul a:active {
+  color: green; /* Change color when active */
+  background-color: white;
+}
+
+/* Centering the Contact Form and Social Media Icons */
+.contact-form {
+    text-align: center; /* Center align the form */
+    margin-top: 50px; /* Add space from the header */
+}
+
+.contact-form form {
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+    resize: none; /* Disable resizing */
+}
+
+.contact-form input[type="submit"] {
+    background-color: var(--btn-color);
+    color: var(--color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+.social-icons {
+    margin-top: 30px; /* Add space from the contact form */
+    text-align: center; /* Center align the icons */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px; /* Add space between the icons */
+    color: var(--color); /* Apply text color */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--btn-color); /* Change color on hover */
+}
+
+#download-resume {
+    display: block;
+    margin: 30px auto; /* Center the button */
+    background-color: var(--btn-color);
+    color: var(--color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#download-resume:hover {
+    background-color: var(--hover-color); /* Change background color on hover */
+}
+
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header_menu">
+        <header>
+            <a class="logo" href="pro.html">SSR<label>KESAVAREDDY</label></a>
+            <nav>
+                <ul>
+                    <li><a href="pro.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                    <li><a href="Education.html">EDUCATION</a></li>
+                    <li><a href="Project.html">PROJECTS</a></li>
+                    <li><a href="Skills.html">SKILLS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1MPaQTfZ4F1oJ04RALxOzZi2x8wCRXqz1/view?usp=sharing" target="_blank"> <span>RESUME</span></a></li>
+                    <li><a href="Contacts.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="contact-form">
+            <h2>Contact SSRKesavareddy</h2>
+            <form action="mailto:ssrkesavareddy08@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ssrkesavareddy" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.github.com/ssrkesavareddy" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <a href="mailto:ssrkesavareddy08@gmail.com" target="_blank" class="google"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/ssrkesavareddy/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          <button id="download-resume">Download Resume</button>
+        </div>
+        
+    </div>
+</body>
+</html>
