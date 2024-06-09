@@ -35,6 +35,8 @@ function updateColor() {
 setInterval(updateColor, 1000);
 
 
-document.getElementById('download-resume').addEventListener('click', function() {
-    window.open('https://drive.google.com/uc?export=download&id=YOUR_FILE_ID', '_blank');
+
+    document.getElementById('download-resume').addEventListener('click', function() {
+    window.open('https://drive.google.com/uc?export=download&id=1V92Y8mtEI812CfIrXwa38cs9OkT84dho', '_blank');
 });
+
